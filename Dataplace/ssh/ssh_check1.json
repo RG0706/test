@@ -23,7 +23,22 @@
         "description" : "",
         "email" : "chetana.vattem@modak.com"
       },
-      "source_info" : null
+      "source_info" : {
+        "metastore_info" : {
+          "metastore_credential_type" : "Plain",
+          "metastore_schema_name" : "",
+          "metastore_credential_name" : "cs2008_hive_mysql",
+          "jdbc_url" : "jdbc:mysql://w3.cdhnode1.modak.com:3306/hive"
+        },
+        "connection_type" : null,
+        "jdbc_info" : {
+          "jdbc_credential_type" : "Plain",
+          "jdbc_credential_name" : "hive_cs_creds",
+          "database_name" : "test",
+          "jdbc_url" : "jdbc:hive2://w3.cdhnode2.modak.com:10000"
+        },
+        "connection_mode" : "JDBC mode"
+      }
     }
   ],
   "dataplace_tag_details" : []
