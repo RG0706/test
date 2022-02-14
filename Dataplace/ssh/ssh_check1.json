@@ -1,0 +1,30 @@
+{
+  "data" : [
+    {
+      "credential_type" : "Plain",
+      "credential_name" : "hive_cs_creds",
+      "dataplace_name" : "Hive_partiton_test",
+      "is_active" : true,
+      "is_sensitive" : false,
+      "connection_type" : "hive",
+      "crawl_frequency" : {
+        "consider_timezone" : true,
+        "cron_freq" : "0 00 12 31 12 ? 2027",
+        "cron_timezone" : "Asia/Calcutta",
+        "cron_type" : "one_time",
+        "cron_info" : {
+          "end_date" : "",
+          "schedule_type" : "",
+          "start_date" : ""
+        }
+      },
+      "contact_info" : {
+        "owner" : "DE2007",
+        "description" : "",
+        "email" : "chetana.vattem@modak.com"
+      },
+      "source_info" : null
+    }
+  ],
+  "dataplace_tag_details" : []
+}
