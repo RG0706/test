@@ -1,0 +1,94 @@
+{
+  "data" : [
+    {
+      "data_movement_name" : "PostgreSQLToHive",
+      "contact_info" : {
+        "owner" : "PJ0102",
+        "description" : "",
+        "email" : ""
+      },
+      "destination_dataplace_name" : "hive_ingest_db",
+      "destination_schema_name" : "ingestion_foundation",
+      "refresh_freq_info" : {
+        "consider_timezone" : true,
+        "cron_freq" : "0 12 14 27 12 ? 2021",
+        "cron_timezone" : "Asia/Calcutta",
+        "cron_type" : "one_time"
+      },
+      "ingestion_table_format" : {
+        "database_name" : true,
+        "prefix" : false,
+        "prefix_value" : "",
+        "schema_name" : true
+      },
+      "refresh_freq" : {
+        "consider_timezone" : true,
+        "cron_freq" : "0 12 14 27 12 ? 2021",
+        "cron_timezone" : "Asia/Calcutta",
+        "cron_type" : "one_time"
+      },
+      "workflow_engine_id" : null,
+      "compute_engine_id" : null,
+      "source_type" : "postgres",
+      "destination_type" : "hive",
+      "bot_priority" : "Default",
+      "advance_table_options" : null,
+      "flow_details" : {
+        "parallel_source_connections" : 10,
+        "destination_file_format" : "Parquet",
+        "verification_threshold" : "",
+        "pipeline_retry" : false,
+        "retry_count" : 3,
+        "ignore_data_types" : [],
+        "schema_drift" : {
+          "email_ids" : [],
+          "advanced_options_sub_type" : "drop_create_table",
+          "config" : {
+            "suffix" : "",
+            "timestamp" : ""
+          },
+          "enabled" : false
+        },
+        "skip_verification" : true,
+        "pipeline_flow_timeout" : 72,
+        "pre_conditions" : {
+          "pipeline_timeout" : 8,
+          "pipeline_details" : [
+            {
+              "status_code_id" : 12,
+              "data_movement_id" : 1844,
+              "data_movement_name" : "OracleToHive",
+              "status_code_description" : "SUCCESS"
+            },
+            {
+              "status_code_id" : 12,
+              "data_movement_id" : 1845,
+              "data_movement_name" : "SQlServerToHive",
+              "status_code_description" : "SUCCESS"
+            }
+          ],
+          "enabled" : true
+        },
+        "email_notification" : {
+          "on_failure" : [
+            "srikrishna.jorige@modak.com"
+          ],
+          "on_success" : [
+            "srikrishna.jorige@modak.com"
+          ],
+          "email_check" : true
+        },
+        "unsupported_data_types" : [
+          {
+            "asis" : [],
+            "null" : [],
+            "ignore" : [],
+            "customtext" : []
+          }
+        ]
+      },
+      "next_schedule_date" : null,
+      "user_readable" : "at 14:12 at 27 day at December month at 2021 year"
+    }
+  ]
+}
